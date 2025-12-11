@@ -1,0 +1,147 @@
+@prefix car: <http://example.org/cars#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+car:CHEVROLET_TRAILBLAZER_LS_2021 a car:Vehicle ;
+    car:madeBy car:Manufacturer_CHEVROLET ;
+    car:mileage "20497.0"^^xsd:float,
+        "24965.0"^^xsd:float ;
+    car:modelName "TRAILBLAZER LS"^^xsd:string ;
+    car:modelYear 2021 ;
+    car:price "22995.0"^^xsd:float,
+        "22999.0"^^xsd:float ;
+    car:reliabilityScore "0.9740791268758526"^^xsd:float ;
+    car:safetyRating "5.0"^^xsd:float .
+
+car:CHEVROLET_TRAILBLAZER_LT_2021 a car:Vehicle ;
+    car:madeBy car:Manufacturer_CHEVROLET ;
+    car:mileage "50648.0"^^xsd:float ;
+    car:modelName "TRAILBLAZER LT"^^xsd:string ;
+    car:modelYear 2021 ;
+    car:price "23995.0"^^xsd:float ;
+    car:reliabilityScore "0.9740791268758526"^^xsd:float ;
+    car:safetyRating "5.0"^^xsd:float .
+
+car:Coupe a owl:Class ;
+    rdfs:subClassOf car:Vehicle .
+
+car:HONDA_CIVIC_SPORT_2022 a car:Vehicle ;
+    car:madeBy car:Manufacturer_HONDA ;
+    car:mileage "25420.0"^^xsd:float ;
+    car:modelName "CIVIC SPORT"^^xsd:string ;
+    car:modelYear 2022 ;
+    car:price "24500.0"^^xsd:float ;
+    car:reliabilityScore "0.966575716234652"^^xsd:float ;
+    car:safetyRating "5.0"^^xsd:float .
+
+car:HYUNDAI_ACCENT_SEL_2022 a car:Vehicle ;
+    car:madeBy car:Manufacturer_HYUNDAI ;
+    car:mileage "5100.0"^^xsd:float ;
+    car:modelName "ACCENT SEL"^^xsd:string ;
+    car:modelYear 2022 ;
+    car:price "19500.0"^^xsd:float ;
+    car:reliabilityScore "0.9979536152796724"^^xsd:float ;
+    car:safetyRating "4.0"^^xsd:float .
+
+car:Hatchback a owl:Class ;
+    rdfs:subClassOf car:Vehicle .
+
+car:KIA_SORENTO_LX_2021 a car:Vehicle ;
+    car:madeBy car:Manufacturer_KIA ;
+    car:mileage "54200.0"^^xsd:float ;
+    car:modelName "SORENTO LX"^^xsd:string ;
+    car:modelYear 2021 ;
+    car:price "23800.0"^^xsd:float ;
+    car:reliabilityScore "0.9918144611186904"^^xsd:float ;
+    car:safetyRating "4.0"^^xsd:float .
+
+car:SUBARU_IMPREZA_PREMIUM_2022 a car:Vehicle ;
+    car:madeBy car:Manufacturer_SUBARU ;
+    car:mileage "10419.0"^^xsd:float ;
+    car:modelName "IMPREZA PREMIUM"^^xsd:string ;
+    car:modelYear 2022 ;
+    car:price "24998.0"^^xsd:float ;
+    car:reliabilityScore "0.9972714870395636"^^xsd:float ;
+    car:safetyRating "5.0"^^xsd:float .
+
+car:SUV a owl:Class ;
+    rdfs:subClassOf car:Vehicle .
+
+car:Sedan a owl:Class ;
+    rdfs:subClassOf car:Vehicle .
+
+car:TOYOTA_C-HR_LE_2021 a car:Vehicle ;
+    car:madeBy car:Manufacturer_TOYOTA ;
+    car:mileage "13180.0"^^xsd:float ;
+    car:modelName "C-HR LE"^^xsd:string ;
+    car:modelYear 2021 ;
+    car:price "23998.0"^^xsd:float ;
+    car:reliabilityScore "0.995225102319236"^^xsd:float ;
+    car:safetyRating "5.0"^^xsd:float .
+
+car:TOYOTA_COROLLA_HYBRID_LE_2022 a car:Vehicle ;
+    car:madeBy car:Manufacturer_TOYOTA ;
+    car:mileage "44459.0"^^xsd:float ;
+    car:modelName "COROLLA HYBRID LE"^^xsd:string ;
+    car:modelYear 2022 ;
+    car:price "22945.0"^^xsd:float ;
+    car:reliabilityScore "0.985675306957708"^^xsd:float ;
+    car:safetyRating "5.0"^^xsd:float .
+
+car:Truck a owl:Class ;
+    rdfs:subClassOf car:Vehicle .
+
+car:Wagon a owl:Class ;
+    rdfs:subClassOf car:Vehicle .
+
+car:madeBy a owl:ObjectProperty ;
+    rdfs:domain car:Vehicle ;
+    rdfs:range car:Manufacturer .
+
+car:mileage a owl:DatatypeProperty ;
+    rdfs:domain car:Vehicle ;
+    rdfs:range xsd:float .
+
+car:modelName a owl:DatatypeProperty ;
+    rdfs:domain car:Vehicle ;
+    rdfs:range xsd:string .
+
+car:modelYear a owl:DatatypeProperty ;
+    rdfs:domain car:Vehicle ;
+    rdfs:range xsd:integer .
+
+car:price a owl:DatatypeProperty ;
+    rdfs:domain car:Vehicle ;
+    rdfs:range xsd:float .
+
+car:reliabilityScore a owl:DatatypeProperty ;
+    rdfs:domain car:Vehicle ;
+    rdfs:range xsd:float .
+
+car:safetyRating a owl:DatatypeProperty ;
+    rdfs:domain car:Vehicle ;
+    rdfs:range xsd:float .
+
+car:Manufacturer_HONDA a car:Manufacturer ;
+    rdfs:label "HONDA" .
+
+car:Manufacturer_HYUNDAI a car:Manufacturer ;
+    rdfs:label "HYUNDAI" .
+
+car:Manufacturer_KIA a car:Manufacturer ;
+    rdfs:label "KIA" .
+
+car:Manufacturer_SUBARU a car:Manufacturer ;
+    rdfs:label "SUBARU" .
+
+car:Manufacturer_CHEVROLET a car:Manufacturer ;
+    rdfs:label "CHEVROLET" .
+
+car:Manufacturer_TOYOTA a car:Manufacturer ;
+    rdfs:label "TOYOTA" .
+
+car:Manufacturer a owl:Class .
+
+car:Vehicle a owl:Class .
+
